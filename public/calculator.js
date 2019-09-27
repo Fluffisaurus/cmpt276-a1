@@ -10,6 +10,7 @@ var percentages = [].slice.call(document.querySelectorAll("p[id*=percent]"));
 // get references to the buttons and result
 var weighted = document.getElementById("weighted");
 var mean = document.getElementById("mean");
+var clearAll = document.getElementById("clear-all");
 var result = document.getElementById("result");
 
 // check if everything is referenced properly
@@ -99,3 +100,16 @@ calculateWeighted = () =>{
 
 weighted.onclick = calculateWeighted;
 mean.onclick = calculateMean;
+
+clearInputs = () =>{
+  for(let i = 0; i < numerators.length; i++){
+    numerators[i].value = "";
+    denominators[i].value = "";
+    weights[i].value = "";
+    percentages[i].innerHTML = "";
+  }
+  result.value = "";
+  window.alert("cleared all inputs!");
+} 
+
+clearAll.onclick = clearInputs;
