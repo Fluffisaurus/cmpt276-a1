@@ -29,8 +29,12 @@ h1{
 }
 
 h2{
-  font-size: 1.25em;
+  font-size: 1.2em;
   color: #bc2328;
+}
+
+p{
+  font-size: 1em;
 }
 
 table, th, td{
@@ -50,7 +54,7 @@ td{
 td input{
   width: 60%;
   padding: 0.4em;
-  margin-top: 0.2em;
+  margin: 0.2em 0;
 }
 
 th{
@@ -58,7 +62,15 @@ th{
 }
 
 button{
-  width: max-content;
+  padding: 0.5em;
+  margin-left: 0.3em;
+  width: 90px;
+  height: auto;
+  border: 1px solid white;
+  border-radius: 4px;
+  background-color: #b81012;
+  color: white;
+  font-weight: bold;
 }
 
 .main-container{
@@ -85,4 +97,10 @@ button{
 
 .button-group{
   align-self: flex-end;
+}
+
+#result{
+  background-color: transparent;
+  border: none;
+  font-size: 1em;
 }
