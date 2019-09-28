@@ -1,6 +1,6 @@
 const DEBUG = 0;
 
-var size = numerators.length;
+var size;
 // get all elements into an array; index for corresponding Activity X row = X-1;
 var weights, numerators, denominators, percentages;
 
@@ -122,6 +122,7 @@ setNewOnChange = () =>{
 insertTableRow = () => {
   size += 1;
   tabRow = document.createElement('tr');
+  tabRow.setAttribute("id", `row-${size}`);
   tabRow.innerHTML = `
     <tr>
       <td>
@@ -153,6 +154,7 @@ insertTableRow = () => {
 fetchElements();
 // check if everything is referenced properly
 if (DEBUG) console.log(weights, numerators, denominators, percentages, weighted, mean, result);
+size = numerators.length;
 initSetOnChange();
 weighted.onclick = calculateWeighted;
 mean.onclick = calculateMean;
